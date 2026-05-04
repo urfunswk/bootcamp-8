@@ -4,99 +4,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Halaman Profile Biodata</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #fff6ef;
+            color: #111;
+            font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background: #fff;
+        }
+        .nav-link {
+            color: #111 !important;
+        }
+        .nav-link:hover,
+        .navbar-brand:hover {
+            color: #f05a28 !important;
+        }
+        .accent {
+            color: #f05a28;
+        }
+        .btn-accent {
+            background: #f05a28;
+            border: none;
+            color: #111;
+        }
+        .btn-accent:hover {
+            background: #d74d24;
+            color: #fff;
+        }
+        .hero-card {
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            background: rgba(240, 90, 40, 0.14);
+            color: #f05a28;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #f05a28;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px;
+            border-radius: 2px;
+        }
+        .card-accent {
+            border: 1px solid rgba(240, 90, 40, 0.18);
+            border-radius: 24px;
+        }
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(240, 90, 40, 0.14);
+            color: #f05a28;
+            font-size: 1.2rem;
+        }
+        .portfolio-card {
+            border: none;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .portfolio-card img {
+            height: 240px;
+            object-fit: cover;
+        }
+        .bg-soft-orange {
+            background: rgba(240, 90, 40, 0.08);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #555;
+        }
+        @media (max-width: 767px) {
+            .portfolio-card img {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="site-header" id="header">
-            <div class="brand">
-                <h1>Muhammad Urfun Nuurrazzaq Siswoko</h1>
-                <p>IT & Network Support | Passionate about high-availability systems, infrastructure, and smooth digital experiences.</p>
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Muhammad Urfun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#header">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#biodata">Biodata</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-accent" href="#portfolio">Contact</a>
+                    </li>
+                </ul>
             </div>
-            <nav class="nav-links">
-                <a href="#header">Home</a>
-                <a href="#biodata">Biodata</a>
-                <a href="#portfolio">Portfolio</a>
-            </nav>
-        </header>
+        </div>
+    </nav>
 
-        <main>
-            <section class="hero">
-                <article class="hero-card">
-                    <div class="section-heading">
-                        <h2>Profil Profesional</h2>
-                    </div>
-                    <p>Hai! Saya Muhammad Urfun Nuurrazzaq Siswoko, seorang IT & Network Support professional dengan pengalaman mendukung infrastruktur enterprise dan lingkungan perbankan berstandar high availability.</p>
-                    <p>Saya menggabungkan kemampuan teknis, troubleshooting cepat, dan komunikasi yang baik untuk memastikan sistem selalu berjalan dengan lancar dan aman.</p>
-                </article>
-
-                <aside class="profile-preview">
-                    <img src="img/foto-profile.png" alt="Foto Profil">
-                    <div class="profile-meta">
-                        <h3>IT & Network Support</h3>
-                        <span>Politeknik Unisma Malang</span>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="section-card" id="biodata">
-                <div class="section-heading">
-                    <h2>Biodata</h2>
-                </div>
-                <div class="biodata-grid">
-                    <div class="biodata-card">
-                        <h3>Nama Lengkap</h3>
-                        <p>Muhammad Urfun Nuurrazzaq Siswoko</p>
-                    </div>
-                    <div class="biodata-card">
-                        <h3>Pendidikan</h3>
-                        <p>D4 Teknologi Rekayasa Komputer Jaringan - Politeknik Unisma Malang</p>
-                    </div>
-                    <div class="biodata-card">
-                        <h3>Pekerjaan</h3>
-                        <p>IT & Network Support</p>
-                    </div>
-                    <div class="biodata-card">
-                        <h3>Kontak</h3>
-                        <p>Email: urfunmuhammad@email.com<br>No. Telepon: 081334134265</p>
-                    </div>
-                    <div class="biodata-card">
-                        <h3>Hobi</h3>
-                        <p>Mendaki, Bersepeda, Berenang</p>
-                    </div>
-                    <div class="biodata-card">
-                        <h3>Alamat</h3>
-                        <p>Perumahan Taman Akasia, Kab. Bogor, Indonesia</p>
+    <section class="py-5" id="header">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-card p-5">
+                        <span class="hero-badge">Profile</span>
+                        <h1 class="display-5 fw-bold">Saya <span class="accent">Muhammad Urfun</span>, IT & Network Support</h1>
+                        <p class="lead text-black-75">Fokus pada stabilitas infrastruktur, troubleshooting cepat, dan layanan support yang andal untuk kebutuhan enterprise dan perbankan.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a class="btn btn-accent btn-lg" href="#portfolio">Lihat Portfolio</a>
+                            <a class="btn btn-outline-dark btn-lg" href="#biodata">Tentang Saya</a>
+                        </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-6 text-center">
+                    <div class="position-relative d-inline-block">
+                        <div class="bg-soft-orange rounded-circle position-absolute" style="width: 260px; height: 260px; top: -20px; right: -20px;"></div>
+                        <img src="img/foto-profile.png" alt="Foto Profil" class="rounded-circle shadow" style="width: 280px; height: 280px; object-fit: cover; position: relative; z-index: 1;">
+                    </div>
+                    <div class="mt-4 text-start d-inline-block">
+                        <h3 class="fw-bold mb-1">IT & Network Support</h3>
+                        <p class="mb-0 text-black-50">Politeknik Unisma Malang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section class="section-card" id="portfolio">
-                <div class="section-heading">
-                    <h2>Portfolio</h2>
+    <section class="py-5 bg-white" id="biodata">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Biodata</h2>
+                <p class="text-muted">Detail singkat tentang pengalaman, pendidikan, dan kontak profesional saya.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Nama Lengkap</h5>
+                        <p class="mb-0">Muhammad Urfun Nuurrazzaq Siswoko</p>
+                    </div>
                 </div>
-                <div class="portfolio-grid">
-                    <article class="portfolio-card">
-                        <img src="img/project-1.jfif" alt="Website E-Commerce">
-                        <h3>Proyek 1</h3>
-                        <p class="project-type">Website E-Commerce</p>
-                        <p>Platform belanja online dengan fitur checkout, payment gateway, dan inventory management. Dibuat menggunakan HTML, CSS, JavaScript, dan PHP.</p>
-                    </article>
-                    <article class="portfolio-card">
-                        <img src="img/project-2.jfif" alt="Aplikasi Task Management">
-                        <h3>Proyek 2</h3>
-                        <p class="project-type">Aplikasi Task Management</p>
-                        <p>Aplikasi untuk mengelola tugas dan proyek dengan fitur kolaborasi real-time. Menggunakan React, Node.js, dan MongoDB.</p>
-                    </article>
-                    <article class="portfolio-card">
-                        <img src="img/project-3.jfif" alt="Blog CMS">
-                        <h3>Proyek 3</h3>
-                        <p class="project-type">Blog CMS</p>
-                        <p>Content Management System blog dengan fitur CRUD, autentikasi pengguna, dan sistem komentar. Dibangun dengan Laravel dan MySQL.</p>
-                    </article>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Pendidikan</h5>
+                        <p class="mb-0">D4 Teknologi Rekayasa Komputer Jaringan - Politeknik Unisma Malang</p>
+                    </div>
                 </div>
-            </section>
-        </main>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Pekerjaan</h5>
+                        <p class="mb-0">IT & Network Support</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Kontak</h5>
+                        <p class="mb-0">Email: urfunmuhammad@email.com<br>No. Telepon: 081334134265</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Hobi</h5>
+                        <p class="mb-0">Mendaki, Bersepeda, Berenang</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card card-accent h-100 p-4">
+                        <h5 class="fw-bold mb-2">Alamat</h5>
+                        <p class="mb-0">Perumahan Taman Akasia, Kab. Bogor, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Portfolio</h2>
+                <p class="text-muted">Beberapa proyek yang saya kerjakan menggunakan teknologi web modern dan praktik terbaik.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-xl-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="img/project-1.jfif" class="card-img-top" alt="Website E-Commerce">
+                        <div class="card-body">
+                            <h5 class="fw-bold accent">Proyek 1</h5>
+                            <p class="text-muted">Website E-Commerce</p>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modal1">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="img/project-2.jfif" class="card-img-top" alt="Aplikasi Task Management">
+                        <div class="card-body">
+                            <h5 class="fw-bold accent">Proyek 2</h5>
+                            <p class="text-muted">Aplikasi Task Management</p>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modal2">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <div class="card portfolio-card shadow-sm">
+                        <img src="img/project-3.jfif" class="card-img-top" alt="Blog CMS">
+                        <div class="card-body">
+                            <h5 class="fw-bold accent">Proyek 3</h5>
+                            <p class="text-muted">Blog CMS</p>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#modal3">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modal1Label">Detail Proyek 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/project-1.jfif" class="img-fluid mb-3 rounded" alt="Website E-Commerce">
+                    <p>Platform belanja online dengan fitur checkout, payment gateway, dan inventory management. Dibuat menggunakan HTML, CSS, JavaScript, dan PHP.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modal2Label">Detail Proyek 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/project-2.jfif" class="img-fluid mb-3 rounded" alt="Aplikasi Task Management">
+                    <p>Aplikasi untuk mengelola tugas dan proyek dengan fitur kolaborasi real-time. Menggunakan React, Node.js, dan MongoDB.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modal3Label">Detail Proyek 3</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/project-3.jfif" class="img-fluid mb-3 rounded" alt="Blog CMS">
+                    <p>Content Management System blog dengan fitur CRUD, autentikasi pengguna, dan sistem komentar. Dibangun dengan Laravel dan MySQL.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Halaman ini dibuat dengan HTML, CSS, dan Bootstrap. Responsif untuk desktop, tablet, dan mobile.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
         <footer class="footer-note">
             Halaman ini dibuat dengan HTML, CSS, dan grid layout. Responsif untuk desktop, tablet, dan perangkat mobile.
