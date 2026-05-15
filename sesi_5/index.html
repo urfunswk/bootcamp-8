@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produk E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-inner container">
+      <div class="brand">TokoKeren</div>
+      <nav class="nav-links">
+        <a href="#beranda">Beranda</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="beranda" class="hero">
+      <h1>Daftar Produk</h1>
+      <p>Pilih kategori untuk melihat produk yang tersedia.</p>
+    </section>
+
+    <section class="filter-panel">
+      <label for="categoryFilter">Filter kategori:</label>
+      <select id="categoryFilter">
+        <option value="all">Semua</option>
+        <option value="electronics">Elektronik</option>
+        <option value="fashion">Fashion</option>
+        <option value="home">Rumah</option>
+      </select>
+      <input id="searchInput" type="search" placeholder="Cari produk..." />
+    </section>
+
+    <p id="productCount" class="product-count">Menampilkan 20 produk</p>
+    <div id="katalog"></div>
+    <section id="productList" class="product-grid" aria-label="Daftar Produk"></section>
+
+    <section id="tentang" class="about">
+      <h2>Tentang TokoKeren</h2>
+      <p>TokoKeren menyediakan produk fashion, elektronik, dan kebutuhan rumah dengan tampilan sederhana serta pencarian mudah.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
